@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>3Dsearch</title>
-    <script type="text/javascript" src="./js/main.js"></script>
     <link rel="stylesheet" href="./css/master.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
@@ -11,32 +10,32 @@
       <p>3Dsearch</p>
     </div>
     <div id="bloc_questions">
-    <p>Question 1 :  Quel est votre tranche de prix ?</p>
-    <input type= "radio" name="tarif" value="350-1000" checked> 350-1000
-    <input type= "radio" name="tarif" value="prix" checked> 1000-3000
-    <input type= "radio" name="tarif" value="prix" checked> 3000-6500
-    <p>Question 2 : Le temps d'impression doit être : </p>
-    <input type= "radio" name="time" value="temps" checked> Rapide
-    <input type= "radio" name="time" value="temps" checked> Normal
-    <input type= "radio" name="time" value="temps" checked> Peu importe
-    <p>Question 3 :  Votre futur fréquence d'utilisation ?</p>
-    <input type= "radio" name="frequence" value="usage" checked> Régulière
-    <input type= "radio" name="frequence" value="usage" checked> Rare
-    <input type= "radio" name="frequence" value="usage" checked> Aléatoire
-    <p>Question 4 : Quelle est la taille maximum d'impression dont vous aurez besoin ?</p>
-    <input type= "radio" name="taille" value="12x12x12" checked> 12x12x12
-    <input type= "radio" name="taille" value="30x30x45" checked> 30x30x45
-    <p>Question 5 : Les odeurs son-elles dérangeante pour vous ?</p>
-    <input type= "radio" name="odeur" value="12x12x12" checked> Oui
-    <input type= "radio" name="odeur" value="12x12x12" checked> Non
-    <p>Question 6</p>
-    <p>Question 7</p>
-    <p>Question 8</p>
-    <p>Question 9</p>
+      <form name="enquete" action="#" method="get" onreset="return annul ()" onsubmit="return soum ()">
+        <p>Quel est votre tranche de prix ?</p>
+        <input type= "radio" name="tarif" value="350-1000" checked onclick="return check(tab = document.getElementsByName('tarif'));"> 350-1000
+        <input type= "radio" name="tarif" value="1000-3000" checked onclick="return check(tab = document.getElementsByName('tarif'));"> 1000-3000
+        <input type= "radio" name="tarif" value="3000-6500" checked onclick="return check(tab = document.getElementsByName('tarif'));"> 3000-6500
+        <p>Le temps d'impression doit être : </p>
+        <input type= "radio" name="time" value="rapide" checked onclick="return check(tab = document.getElementsByName('time'));"> Rapide
+        <input type= "radio" name="time" value="normal" checked onclick="return check(tab = document.getElementsByName('time'));"> Normal
+        <input type= "radio" name="time" value="peu importe" checked onclick="return check(tab = document.getElementsByName('time'));"> Peu importe
+        <p>Votre futur fréquence d'utilisation ?</p>
+        <input type= "radio" name="frequence" value="usage" checked> Régulière
+        <input type= "radio" name="frequence" value="usage" checked> Rare
+        <input type= "radio" name="frequence" value="usage" checked> Aléatoire
+        <p>Quelle est la taille maximum d'impression dont vous aurez besoin ?</p>
+        <input type= "radio" name="taille" value="12x12x12" checked> 12x12x12
+        <input type= "radio" name="taille" value="30x30x45" checked> 30x30x45
+        <p>Les odeurs son-elles dérangeante pour vous ?</p>
+        <input type= "radio" name="odeur" value="oui" checked> Oui
+        <input type= "radio" name="odeur" value="non" checked> Non
+      </form>
+      <a href="imprimante.html"><button class="btn">Submit</button></a>
     <div id="result">
 
 
     </div>
   </div>
+      <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
